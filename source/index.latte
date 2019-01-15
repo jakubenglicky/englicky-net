@@ -1,0 +1,81 @@
+---
+layout: "_layouts/default.latte"
+---
+
+{block content}
+    <div id="wrapper">
+        <nav id="nav">
+            <a href="#me" class="icon fa-home active"><span>Úvod</span></a>
+            <a href="#o-mne" class="icon fa-info"><span>O mně</span></a>
+            <a href="#reference" class="icon fa-folder"><span>Reference</span></a>
+            <a href="#kontakt" class="icon fa-envelope"><span>Kontakt</span></a>
+            <a href="https://github.com/jakubenglicky" target="_blank" class="icon fa-github"><span>Github</span></a>
+        </nav>
+
+        <div id="main">
+
+            <article id="me" class="panel">
+                <header>
+                    <h1>Jakub Englický</h1>
+                    <p>WEB DEVELOPER</p>
+                </header>
+                <a href="#o-mne" class="jumplink pic">
+                    <span class="arrow icon fa-chevron-right"><span>Moje reference</span></span>
+                    <img src="images/me.jpg" alt="" />
+                </a>
+            </article>
+
+            <article id="o-mne" class="panel">
+                <header>
+                    <h2>O mně</h2>
+                </header>
+
+                <p align="justify">
+                    Mé jméno je Jakub Englický a je mi 20 let. <br>
+                    Odmaturoval jsem na gymnáziu Zikmunda Wintra v Rakovníku a nyní jsem studentem Fakulty Informačních Technologií na Vysokém Učením Technickém v Brně.<br><br>
+                    Již více jak 10 let se zajímám o IT a v současné době pracuji převážně na webových aplikacích s nasazením jazyků PHP, JavaScript a Nette.
+                    V posledních měsících jsem se rozhodl rozšířit si obzory a začal jsem pracovat s jednočipovými stavebnicemi Arduino. <br><br>
+
+                    V rámci střední školy, na kterou jsem docházel jsme vytvořili kompletní řešení tzv. elektronických panelů, které lze využít k zobrazení aktuálních informací
+                    na různých místech.
+
+                </p>
+            </article>
+
+            <article id="reference" class="panel">
+                <header>
+                    <h2>Reference</h2>
+                </header>
+                <p>
+                    Ukázka mé dosavadní tvorby:
+                </p>
+                <section>
+                    <div class="row">
+                        <div class="4u 12u$(mobile)">
+                            <a href="#" class="image fit"><img src="images/pic01.jpg" alt=""></a>
+                        </div>
+
+                    </div>
+                </section>
+            </article>
+
+            <article id="kontakt" class="panel">
+                <header>
+                    <h2>Kontakt</h2>
+                </header>
+                <p>Kontaktovat mě lze telefonicky na +420 733 348 366, e-mailem: jakubenglicky@gmail.com nebo pomocí následujícího kontaktního formuláře. </p>
+
+
+            </article>
+
+        </div>
+
+        <div id="footer">
+            <ul class="copyright">
+                <li>&copy; {php echo "2016"; if(date("Y") > 2016){echo " - " . date("Y");}   }</li><li>Jakub Englický</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+
+    </div>
+{/block}
+
