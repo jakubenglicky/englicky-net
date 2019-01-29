@@ -6,15 +6,41 @@
 -->
 <html>
 <head>
-    <title>Astral by HTML5 UP</title>
+    <title>Jakub Englický - Web Developer</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 <body class="is-preload">
-{block content}{/block}
 
+<!-- Wrapper-->
+<div id="wrapper">
+
+    <!-- Nav -->
+    <nav id="nav">
+        <a href="#" class="icon fa-home"><span>Home</span></a>
+        <a href="#o-mne" class="icon fa-info"><span>O mně</span></a>
+        <a href="#projekty" class="icon fa-folder"><span>Projekty</span></a>
+        <a href="https://github.com/jakubenglicky" target="_blank" class="icon fa-github"><span>Github</span></a>
+        <a href="https://www.linkedin.com/in/jakub-englicky/" target="_blank" class="icon fa-linkedin-square"><span>LinkedIn</span></a>
+
+    </nav>
+    <!-- Main -->
+    <div id="main">
+
+        {include content}
+
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <ul class="copyright">
+            <li>&copy; 2016 - {php echo date('Y');}</li><li>Jakub Englický</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+    </div>
+
+</div>
 
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
