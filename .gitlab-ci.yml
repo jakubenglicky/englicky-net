@@ -1,0 +1,8 @@
+stages:
+  - prepare
+
+composer:
+  stage: prepare
+  image: composer:latest
+  script:
+    - composer install
