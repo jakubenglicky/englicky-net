@@ -1,5 +1,8 @@
 name: Build and Publish to Registry
-on: [push]
+on:
+  push:
+    tags:        
+      - v*
 jobs:
   build:
     runs-on: ubuntu-latest
