@@ -1,0 +1,23 @@
+version: '3.3'
+
+services:
+  statie:
+    image: jakubenglicky/symplify-statie
+    volumes:
+    - ./source:/statie/source
+    - ./output:/statie/output
+    entrypoint: vendor/bin/statie generate source
+
+  web:
+    image: httpd:2.4
+    volumes:
+    - ./output:/usr/local/apache2/htdocs/
+    ports:
+    - 8080:80
+
+  composer:
+    image: composer:latest
+    volumes:
+    - ./:/app
+    working_dir: /app
+    command: composer install

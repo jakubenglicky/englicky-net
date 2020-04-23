@@ -1,5 +1,13 @@
-FROM php:7.2-apache
+FROM jakubenglicky/symplify-statie:latest as statie
 
-COPY output/ /var/www/html/
+COPY ./source /statie/source
+
+RUN vendor/bin/statie generate source
+
+FROM httpd:2.4
+
+WORKDIR /usr/local/apache2/htdocs/
+
+COPY --from=statie /statie/output .
 
 EXPOSE 80
