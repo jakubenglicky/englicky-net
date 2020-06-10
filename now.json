@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/*.php": {
+    "vendor/bin/statie": {
       "runtime": "now-php@0.0.9"
     }
   }
