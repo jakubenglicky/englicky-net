@@ -1,4 +1,4 @@
-name: Github pages
+name: Deploy to GH Pages
 
 on:
   push:
@@ -6,16 +6,17 @@ on:
       - master
 
 jobs:
-  deploy:
-    runs-on: ubuntu-18.04
+  build:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: shivammathur/setup-php@v2
+
+      - name: Static generator
+        uses: shivammathur/setup-php@v2
         with:
           php-version: 7.3
           coverage: none # default is xdebug
-
-      - run: make init
+      - run: composer install --prefer-dist --no-progress --no-suggest --no-interaction --optimize-autoloader
       - run: make static
 
       - name: Deploy to GH Pages

@@ -1,23 +1,26 @@
-version: '3.3'
+version: '3'
 
 services:
-  statie:
-    image: jakubenglicky/symplify-statie
-    volumes:
-    - ./source:/statie/source
-    - ./output:/statie/output
-    entrypoint: vendor/bin/statie generate source
-
   web:
-    image: httpd:2.4
+    image: peckadesign/php:7.4-dev
     volumes:
-    - ./output:/usr/local/apache2/htdocs/
+      - ./html:/var/www/html
     ports:
-    - 8080:80
+      - 80:80
+    depends_on:
+      - composer
+      - statie
+
+  statie:
+    image: php:7.3-cli
+    volumes:
+      - ./:/app
+    entrypoint: vendor/bin/statie generate source --output=html
+    working_dir: /app
 
   composer:
-    image: composer:latest
+    image: peckadesign/php:7.4-dev
     volumes:
-    - ./:/app
-    working_dir: /app
+      - ./:/app
     command: composer install
+    working_dir: /app
