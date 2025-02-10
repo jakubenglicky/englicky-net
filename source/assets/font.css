@@ -1,0 +1,40 @@
+/* 🔹 Futura PT Book */
+@font-face {
+  font-family: 'Futura PT Book';
+  src: url('https://custom-fonts-5e512.web.app/FuturaPT-Book.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 🔹 Futura PT Medium */
+@font-face {
+  font-family: 'Futura PT Medium';
+  src: url('https://custom-fonts-5e512.web.app/FuturaPT-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* 🔹 Futura PT Demi */
+@font-face {
+  font-family: 'Futura PT Demi';
+  src: url('https://custom-fonts-5e512.web.app/FuturaPT-Demi.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 🔹 Fino Sans */
+@font-face {
+  font-family: 'Fino Sans';
+  src: url('https://custom-fonts-5e512.web.app/FinoSans-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+.book {
+font-family: 'Futura PT Book', sans-serif !important;
+}
+.medium {
+font-family: 'Futura PT Medium', sans-serif !important;
+}
+.demi {
+font-family: 'Futura PT Demi', sans-serif !important;
+}
